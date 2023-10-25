@@ -1,0 +1,33 @@
+def operation(set1,set2):
+    q=input("Enter your choice\n1.Intersection\n2.Union\n")
+    if '1' in q:
+        set3=set()
+        for i in set2:
+            if i in set1:
+                set3.add(i)
+            else:
+                pass
+        print("Intersection is: ",set3)
+    elif '2' in q:
+        for i in set2:
+            if i in set1:
+                pass
+            else:
+                set1.add(i)
+        print("Union is: " ,set1)
+    else:
+        print("Invalid choice\n")
+w=int(input("Enter the sizes for sets\n"))
+set1=set()
+set2=set()
+print("Enter the elemnts for set 1:\n")
+for i in range(w):
+    elem1=input()
+    set1.add(elem1)
+print("Set 1 elemnts are: ",set1)
+print("Enter the elemnts for set 2:\n")
+for i in range(w):
+    elem2=input()
+    set2.add(elem2)
+print("Set 2 elemnts are: ",set2)
+operation(set1,set2)
